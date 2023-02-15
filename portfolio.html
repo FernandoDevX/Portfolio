@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Portfolio - Seu Nome</title>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+
+</head>
+
+
+<body>
+
+    <div id="navegationClass" class="navegationClass">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li id="threelineIconClass" class="threelineIconClass" onclick="openMenu()">&#9776;</li>
+            <!-- o codigo &#9776, se refere ao simbolo de uma imagem que esta nas entidades de html css-->
+        </ul>
+    </div>
+
+	<div class="mainClass">
+		<ul class="breadCrumbsClass">
+			<li><a href="index.html">Home</a></li>
+			<li>></li>
+			<li>Portfolio</li>
+		</ul>
+
+		<h1>Portfolio</h1>
+
+		<div style="background-image: url('img/mini1.jpg')" class="miniatureClass">
+			<a href="paginaTrabalho1.html">
+				<div class="blackBoxClass">
+					<div class="boxTextClass">
+						<h1>Projeto Um</h1>
+						<h2>Web Design</h2>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div style="background-image: url('img/mini2.jpg')" class="miniatureClass">
+			<a href="paginaTrabalho2.html">
+				<div class="blackBoxClass">
+					<div class="boxTextClass">
+						<h1>Projeto Dois</h1>
+						<h2>Web Design</h2>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div style="background-image: url('img/mini1.jpg')" class="miniatureClass">
+			<a href="paginaTrabalho3.html">
+				<div class="blackBoxClass">
+					<div class="boxTextClass">
+						<h1>Projeto Três</h1>
+						<h2>Web Design</h2>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- esse caso foi melhor criar as miniaturas com inline style, pois sao figuras diferentes-->
+		<!-- a propriedade background-img insere uma imagem de fundo -->
+		<!-- o mapeamento das imagens aqui no html e feita com aspas simples('') -->
+
+		<br>
+		<a class="backLinkClass" href="index.html">&larr;Voltar ao início<a>
+
+	</div>
+
+
+</body>
+
+</html>

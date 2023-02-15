@@ -1,0 +1,398 @@
+html,
+body {
+    /* modifica as propriedades para ambos elementos */
+    margin: 0;
+    /* font-size: 0; */
+    /* nesse caso foi necessario resetar dessa forma pois nao seria possivel usar 100% nos espaços das divs,ficaria com uma linha entres os espacos. Por consequencia e necessario inserir o tamanho de cada fonte individualmente na pagina */
+}
+
+
+body {
+    background-color: #2b2b2b;
+    font-family: 'Montserrat', sans-serif;
+    /* fonte impotada da google fonts, com o tipo de familia como backup */
+}
+
+.navegationClass {
+    background-color: #2b2b2b;
+    height: 50px;
+    color: white;
+    /* color: rgb(255, 255, 255) - color: #ffffff - E possivel inserir cores atraves do nome, da numeracao RGB e pelo numero hexadecimal*/
+
+    animation-name: navegationKF;
+    animation-duration: 4s;
+}
+
+.navegationClass ul {
+    margin-top: 0;
+    list-style: none;
+    padding-left: 0;
+    text-align: right;
+    height: 50px;
+
+}
+
+.navegationClass li {
+    display: inline-block;
+    /* o padrao de uma lista é block, ocupa toda linha, nesse caso usando o inline-block faz todos elementos ocuparem uma linha somente */
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.navegationClass a {
+    color: white;
+    text-decoration: none;
+}
+
+.navegationClass a:hover {
+    color: #f27609;
+}
+
+.navegationClass li.threelineIconClass {
+    display: none;
+}
+
+.coverClass {
+    color: #ffffff;
+}
+
+.coverClass span {
+    color: #f27609;
+    display: block;
+}
+
+.coverClass div {
+    display: inline-block;
+    /* faz com que a as sessoes(divs) fiquem uma ao lado da outra */
+    height: 650px;
+}
+
+.photoClass {
+    width: 40%;
+    text-align: center;
+
+    animation-name: photoKF;
+    animation-duration: 2s;
+}
+
+.photoClass img {
+    width: 330px;
+    border-radius: 330px;
+    /* propriedade que aredonda as bordas, para ficar redondo e necessario o mesmo valor para a imagem e para a propriedade */
+    margin-top: 100px;
+}
+
+.titleClass {
+    vertical-align: top;
+    /* por padrao o conteudo e alinhado abaixo, com essa propriedade ele se alinha na parte superior */
+    width: 59%;
+
+    animation-name: titleKF;
+    animation-duration: 2s;
+}
+
+.titleClass h1 {
+    font-size: 58px;
+    margin-top: 200px;
+    text-transform: uppercase;
+    /* transforma todas as letras em maiusculas */
+    font-weight: 400;
+    line-height: 54px;
+}
+
+.titleClass h2 {
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: -26px;
+    /* E possivel usar numeros negativos nas margens */
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+.mainClass {
+
+    padding-top: 80px;
+    padding-right: 180px;
+    padding-bottom: 80px;
+    padding-left: 100px;
+    /*padding: 80px,180px,80px,100px; - Shorthand properties = coloca simultaneamente varios valores em uma propriedade - nesse caso a ordem seria cima,direita,baixo,esquerda */
+
+    animation-name: mainKF;
+    animation-duration: 2s;
+}
+
+.photoCurriculoClass {
+    float: left;
+    /* ao inves de usar um display inline block, e possivel usar o float faz com que o item fica na possiçao escolhida na propriedade */
+    /* nesse caso foi usada uma propriedade no H3 idiomas, para unular o float a esquerda */
+    width: 280px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.mainClass h1 {
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.mainClass h2 {
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 40px;
+}
+
+.mainClass h3 {
+    font-size: 12px;
+    color: #f27609;
+    text-transform: uppercase;
+}
+
+.mainClass p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 24px;
+    text-align: justify;
+    /* faz com que os espaços do final do texto fiquem uniforme */
+}
+
+.breadCrumbsClass {
+    /* BreadCrumbs sao os caminhos das janelas, de navegacao nas paginas  */
+    list-style: none;
+    padding-left: 0;
+    color: gray;
+}
+
+.breadCrumbsClass li {
+    display: inline-block;
+}
+
+.breadCrumbsClass a {
+    color: gray;
+
+}
+
+/* ------------------------------------------------------------------ */
+
+.socialClass {
+    width: 50px;
+    margin-right: 20px;
+}
+
+/* ------------------------------------------------------------------ */
+
+.miniatureClass {
+    width: 320px;
+    height: 320px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background-size: contain;
+    /* uma imagem com o tamanho menos que o definido, acaba sendo replicada para caber na resolução escolhida, para nao perde a qualidade */
+    /* o background size definido como contains vai esticar as imagens que tenham a resolução menor que o valor definido.Perdendo assim qualidade*/
+}
+
+.miniatureClass a {
+    text-decoration: none;
+    /* Faz com que o sublinhado que aparece em links por padrao seja retirado */
+}
+
+.blackBoxClass {
+    /* classe que cria o quadro de efeito transparente na imagem */
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    padding-top: 100;
+    overflow: hidden;
+    /* faz com a que a parte da imagem que sai do espaço da sessao fique oculta */
+    opacity: 0;
+    /* propriedade que faz um elemento ficar opaco, vai 0 a 1, 0 = sem trasparencia e 1 totalmente colorido */
+    transition: 1s;
+}
+
+.blackBoxClass:hover {
+    opacity: 0.8;
+    transition: 1s;
+}
+
+.blackBoxClass h1 {
+    font-size: 16px;
+    color: #f27609;
+    text-transform: uppercase;
+    margin-top: 120px;
+}
+
+.blackBoxClass h2 {
+    text-transform: none;
+    font-weight: 100;
+}
+
+.boxTextClass {
+    text-align: center;
+}
+
+.picTrabalhoClass {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.backLinkClass {
+    color: #f27609;
+}
+
+/* Animaçoes KeyFrames CSS------------------------------------------------------- */
+
+@keyframes photoKF {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes titleKF {
+    0% {
+        opacity: 0;
+        transform: translate(0px, -20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes navegationKF {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mainKF {
+
+    0% {
+        transform: translate(-20px, 0px)
+    }
+
+    100% {
+        transform: translate(0px, 0px)
+    }
+}
+
+
+/* Media Querry CSS ---------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .navegationClass li {
+        display: none;
+    }
+
+    .navegationClass li.threelineIconClass {
+        display: inline-block;
+    }
+
+    .navegationClass li.threelineIconClass:hover {
+        color: #f27609;
+        cursor: pointer;
+    }
+
+    .coverClass div {
+        display: block;
+        height: auto;
+    }
+
+    .photoClass {
+        width: 100%;
+    }
+
+    .photoClass img {
+        margin-top: 0px;
+        max-width: 80%;
+    }
+
+    .titleClass {
+        width: 100%;
+        text-align: center;
+    }
+
+    .titleClass h1 {
+        margin-top: 30px;
+        font-size: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .titleClass h2 {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .mainClass {
+        padding: 10px 5% 40px 5%;
+    }
+
+    .mainClass p {
+        text-align: left;
+        line-height: 30px;
+    }
+
+    .breadCrumbsClass li {
+        font-size: 12px;
+    }
+
+    .photoCurriculoClass {
+        float: none;
+        max-width: 100%;
+        margin-right: 0px;
+    }
+
+    .miniatureClass {
+        max-width: 100%;
+        background-size: auto 100%;
+        /* largura x altura */
+    }
+
+    .blackBoxClass {
+        opacity: 0.8;
+    }
+
+    .menuJsClass {
+        height: auto;        
+    }
+
+    .menuJsClass ul {
+        height: auto;
+        text-align: center;
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+
+    .menuJsClass li {
+        display: block;
+        border-bottom: solid grey 1px;
+        width: 100%;
+        padding: 0;
+    }
+
+}
